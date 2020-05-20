@@ -101,10 +101,20 @@ void logic() {
 }
 
 void check_cond() {
+    bool all = true;
     for(int i = 0; i < (sizeof(win)/sizeof(*win)); i++) {
         if(places[win[i][0]] == turn && places[win[i][1]] == turn && places[win[i][2]] == turn) {
             won = true;
         }
+    }
+    for(int i = 0; i < 9; i++) {
+        if(places[i] != 'X' && places[i] != 'O') {
+            all = false;
+        }
+    }
+    if(all) {
+        won = true;
+        turn = 'N';
     }
 }
 
@@ -124,7 +134,10 @@ void tictactoe() {
             }
         }
     }
-    std::cout << "Player " << turn << " won!" << std::endl;
+    if(turn == 'N')
+        std::cout << "None of players won!" << std::endl;
+    else
+        std::cout << "Player " << turn << " won!" << std::endl;
     _sleep(5000);
 }
 
