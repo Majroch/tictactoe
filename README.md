@@ -15,6 +15,7 @@ This is basic Tic-Tac-Toe implementation in C++. It's not optimized at all :)
 ### 1. Requirements
 All required packages for this, are only for compilling, so required packages only are:
 `make g++`
+
 On Ubuntu you can install them with:
 `sudo apt install make g++`
 
