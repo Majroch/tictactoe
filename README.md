@@ -21,10 +21,14 @@ On Ubuntu you can install them with:
 
 ### 2. Compile
 To compile it just run:
+
 `make`
+
 It'll output program as `main`
 
 ## 2. Usage
 Run:
+
 `./main`
+
 and play Tic-Tac-Toe
